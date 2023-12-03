@@ -1,0 +1,6 @@
+FROM golang:1.21.4-bookworm
+WORKDIR /booksapi
+COPY . .
+RUN go build -o main .
+EXPOSE 8080
+CMD ["./main"]
